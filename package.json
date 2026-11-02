@@ -1,0 +1,15 @@
+{
+  "name": "basket-checker",
+  "version": "1.0.0",
+  "description": "Compare a UK grocery basket across the supermarkets near you, using open price and map data.",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "mock": "node test/mock-upstreams.js",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT"
+}

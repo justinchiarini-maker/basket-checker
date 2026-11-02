@@ -1,0 +1,14 @@
+# One-click deploy on Render: New → Blueprint → pick this repo.
+services:
+  - type: web
+    name: basket-checker
+    runtime: node
+    plan: free
+    buildCommand: "true"
+    startCommand: node src/server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: USER_AGENT
+        value: "BasketChecker/1.0 (+https://your-domain.example)"
